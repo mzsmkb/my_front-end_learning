@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+    
+    //组件是用来创建组件实例的（vm）
+        const Root = {
+            data (){
+                return {
+                    count:0
+                }
+                
+            },
+  
+            template:"<button @click='count++'>点我一下</button>,你点了{{count}}下"
+        }
+
+        
+        const app = Vue.createApp(Root)
+        app.mount("#app")
+
+    </script>
+</body>
+</html>
